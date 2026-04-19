@@ -1,0 +1,15 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "NoteStudio",
+  "orientation": "any",
+  "scope": "/NoteStudio/",
+  "short_name": "NoteStudio",
+  "start_url": "/NoteStudio/",
+  "theme_color": "#ffffff",
+  "description": "Aplicatie de notite",
+  "categories": [
+    "productivity"
+  ]
+}
