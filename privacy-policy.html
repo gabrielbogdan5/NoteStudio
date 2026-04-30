@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — NoteStudio</title>
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap');
+
+    :root {
+      --bg:        #0f0a1e;
+      --surface:   #1a1330;
+      --border:    #2e2450;
+      --accent:    #a78bfa;
+      --accent2:   #7c3aed;
+      --text:      #e2d9f3;
+      --muted:     #8b7fb0;
+      --white:     #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* ── Background decoration ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 10%, rgba(124,58,237,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(167,139,250,0.10) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,10,30,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .header-badge {
+      margin-left: auto;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+    }
+
+    /* ── Main layout ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span {
+      color: var(--accent);
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.35rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 1.1em;
+      background: linear-gradient(to bottom, var(--accent2), var(--accent));
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p {
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: rgba(167,139,250,0.07);
+      border: 1px solid rgba(167,139,250,0.2);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .highlight-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .highlight p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .highlight strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ── List ── */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    ul li {
+      padding: 0.3rem 0 0.3rem 1.4rem;
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    ul li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--accent2);
+      font-size: 0.45rem;
+      top: 0.55rem;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Footer ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      main { padding: 2.5rem 1.25rem 4rem; }
+      header { padding: 0.875rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-mark">✦</div>
+    <span class="logo-text">NoteStudio</span>
+    <span class="header-badge">Privacy Policy</span>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <p class="hero-label">Legal Document</p>
+      <h1>Privacy Policy</h1>
+      <p class="hero-meta">
+        Effective date: <span>April 30, 2026</span> &nbsp;·&nbsp; Last updated: <span>April 30, 2026</span>
+      </p>
+    </div>
+
+    <div class="highlight">
+      <div class="highlight-icon">🔒</div>
+      <p><strong>Short version:</strong> NoteStudio stores all your notes locally on your device using your browser's localStorage. We collect no personal data, no analytics, and no information is ever sent to any server.</p>
+    </div>
+
+    <section>
+      <h2>1. Who We Are</h2>
+      <p>NoteStudio is a free, open-source Progressive Web App (PWA) developed and maintained by Bogdan Stoica. The app is available at <strong>gabrielbogdan5.github.io/NoteStudio</strong>.</p>
+    </section>
+
+    <section>
+      <h2>2. Information We Collect</h2>
+      <p><strong>We collect no personal information whatsoever.</strong></p>
+      <p>NoteStudio does not collect, transmit, store, or share any personal data. Specifically:</p>
+      <ul>
+        <li>We do not collect your name, email address, or any account information</li>
+        <li>We do not track your location</li>
+        <li>We do not use cookies or similar tracking technologies</li>
+        <li>We do not collect usage statistics or analytics</li>
+        <li>We do not run advertisements</li>
+        <li>We do not share any data with third parties</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. How Your Notes Are Stored</h2>
+      <p>All notes, preferences, and settings are stored exclusively in your browser's <strong>localStorage</strong> — a storage mechanism built into your web browser that keeps data on your device only.</p>
+      <ul>
+        <li>Your notes never leave your device</li>
+        <li>No server receives or stores your content</li>
+        <li>Clearing your browser data will permanently delete your notes</li>
+        <li>Your data is not synchronized across devices</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Offline Functionality</h2>
+      <p>NoteStudio uses a Service Worker to cache app assets (HTML, CSS, JavaScript, icons) so the app works without an internet connection. This cache contains only the app's own code files — never your notes or personal content.</p>
+    </section>
+
+    <section>
+      <h2>5. Third-Party Services</h2>
+      <p>NoteStudio may load fonts or libraries from the following external CDNs:</p>
+      <ul>
+        <li>Google Fonts (fonts.googleapis.com)</li>
+        <li>Cloudflare CDN (cdnjs.cloudflare.com)</li>
+        <li>jsDelivr (cdn.jsdelivr.net)</li>
+      </ul>
+      <p>These services may log your IP address as part of standard web server operation. Please refer to their respective privacy policies for details. These requests are cached by the Service Worker after the first load.</p>
+    </section>
+
+    <section>
+      <h2>6. Children's Privacy</h2>
+      <p>NoteStudio does not knowingly collect any information from children under the age of 13. Since we collect no data at all, the app is safe for users of all ages.</p>
+    </section>
+
+    <section>
+      <h2>7. Changes to This Policy</h2>
+      <p>If we ever change this privacy policy, we will update the "Last updated" date at the top of this page. We encourage you to review this page periodically. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2>8. Contact</h2>
+      <p>If you have any questions about this privacy policy, please reach out:</p>
+      <div class="contact-card">
+        <p>📧 Email: <a href="mailto:notestudiocontact@gmail.com">notestudiocontact@gmail.com</a></p>
+        <p>🌐 App: <a href="https://gabrielbogdan5.github.io/NoteStudio/" target="_blank">gabrielbogdan5.github.io/NoteStudio</a></p>
+        <p>💻 Source: <a href="https://github.com/gabrielbogdan5/NoteStudio" target="_blank">github.com/gabrielbogdan5/NoteStudio</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 NoteStudio · <a href="index.html">Back to App</a> · No data collected, ever.</p>
+  </footer>
+
+</body>
+</html>
