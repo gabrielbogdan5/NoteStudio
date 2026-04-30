@@ -1,6 +1,6 @@
 {
   "name": "NoteStudio",
-  "short_name": "NoteStudio",
+  "short_name": "NoteStudio",,
   "description": "A beautifully crafted, offline-first notes app with rich text editor, multiple themes, and full offline support.",
   "lang": "en",
   "id": "/NoteStudio/",
