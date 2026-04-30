@@ -102,6 +102,20 @@
       "icons": [{ "src": "icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
     }
   ],
+  "widgets": [
+  {
+    "name": "Quick Note",
+    "description": "Create a new note instantly from your desktop.",
+    "url": "/NoteStudio/?new=1",
+    "icons": [
+      {
+        "src": "icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+],
 
   "icons": [
     {
