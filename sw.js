@@ -2,8 +2,8 @@
    NoteStudio — Service Worker  (Cache-First + Network Fallback)
    ============================================================ */
 
-const CACHE_NAME    = 'notestudio-v5';
-const RUNTIME_CACHE = 'notestudio-runtime-v5';
+const CACHE_NAME    = 'notestudio-v6';
+const RUNTIME_CACHE = 'notestudio-runtime-v6';
 const OFFLINE_URL   = '/NoteStudio/offline.html';
 
 /* ── Files that MUST be cached at install time ── */
