@@ -4,8 +4,8 @@
   "description": "A beautifully crafted, offline-first notes app with rich text editor, multiple themes, and full offline support.",
   "lang": "en",
   "id": "/NoteStudio/",
-  "start_url": "/./",
-  "scope": "/./",
+  "start_url": "/NoteStudio/",
+  "scope": "/NoteStudio/",
   "display": "standalone",
 
   "display_override": [
