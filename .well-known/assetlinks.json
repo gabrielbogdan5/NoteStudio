@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "Io.github.gabrielbogdan5.notestudio",
+        "sha256_cert_fingerprints": ["AA:BC:CE:BA:A2:90:87:71:56:3A:A7:59:95:F4:4B:1C:7E:FB:81:E5:12:41:66:08:7F:F9:44:12:26:5C:1E:94"]
+      }
+    }]
