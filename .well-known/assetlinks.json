@@ -1,8 +1,11 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "app.notestudio.gabrielbogdan5",
-    "sha256_cert_fingerprints": ["50:34:12:20:21:40:1B:1E:F2:BE:AC:CD:AC:07:AB:DA:A0:7B:47:B6:B3:05:F4:19:6F:C9:B0:E8:B6:F0:1F:A4"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.notestudio.gabrielbogdan5",
+      "sha256_cert_fingerprints":
+        ["6C:30:05:42:25:4B:C6:F1:E5:95:43:B1:9E:0C:72:66:27:A0:22:E5:C8:05:FC:D3:8C:29:0B:04:30:13:8C:84"]
+    }
   }
-}]
+]
