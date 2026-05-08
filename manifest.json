@@ -103,7 +103,6 @@
     "new_note_url": "/NoteStudio/"
   },
 
-
   "widgets": [
     {
       "name": "Quick Note",
@@ -116,7 +115,7 @@
       "multiple": false,
       "icons": [
         {
-          "src": "/NoteStudio/icon-192x192.png",
+          "src": "icon-192x192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
