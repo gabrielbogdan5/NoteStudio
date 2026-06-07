@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Security -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self';">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- SEO -->
+  <meta name="description" content="Learn about NoteStudio v1.3.1 — features, tech stack, developer info and links.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://notestudio.pages.dev/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About — NoteStudio">
+  <meta property="og:description" content="Learn about NoteStudio v1.3.1 — features, tech stack, developer info and links.">
+  <meta property="og:url" content="https://notestudio.pages.dev/about.html">
+  <meta property="og:image" content="https://notestudio.pages.dev/icon-512x512.png">
+  <meta property="og:site_name" content="NoteStudio">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About — NoteStudio">
+  <meta name="twitter:description" content="Learn about NoteStudio v1.3.1 — features, tech stack, developer info and links.">
+  <meta name="twitter:image" content="https://notestudio.pages.dev/icon-512x512.png">
+
+  <!-- PWA / UX -->
+  <meta name="theme-color" content="#7c3aed">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NoteStudio">
+  <link rel="apple-touch-icon" href="https://notestudio.pages.dev/icon-192x192.png">
+  <link rel="manifest" href="https://notestudio.pages.dev/manifest.json">
+<title>About — NoteStudio</title>
+<link rel="icon" href="icon-192x192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0b1a;--bg2:#13102a;--surface:#1a1535;--surface2:#221d3f;--border:rgba(124,58,237,0.18);--accent:#7c3aed;--accent2:#e040fb;--grad:linear-gradient(135deg,#7c3aed,#e040fb);--text1:#f0ecff;--text2:#b8aee0;--text3:#7a6fa8;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text1);min-height:100vh;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;background-image:linear-gradient(rgba(124,58,237,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,0.05) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+.wrap{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:40px 24px 80px}
+a{color:var(--accent2);text-decoration:none}.a:hover{text-decoration:underline}
+.back{display:inline-flex;align-items:center;gap:8px;color:var(--text3);font-size:13px;margin-bottom:32px;transition:color .2s;text-decoration:none}
+.back:hover{color:var(--accent)}
+.ns-header{display:flex;align-items:center;gap:18px;margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border)}
+.ns-icon{width:64px;height:64px;background:var(--grad);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#fff;flex-shrink:0;box-shadow:0 8px 32px rgba(124,58,237,0.4)}
+.ns-name{font-size:32px;font-weight:800;letter-spacing:-0.5px}
+.ns-name span:first-child{color:var(--accent)}
+.ns-name span:last-child{color:var(--accent2)}
+.ns-sub{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--text3);margin-top:4px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:6px 16px;font-size:13px;color:var(--text2);margin-bottom:32px}
+.badge::before{content:'●';color:var(--accent);font-size:8px}
+.tagline{font-size:20px;font-weight:700;color:var(--text1);margin-bottom:12px}
+.desc{font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:40px}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:48px}
+.feat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;transition:border-color .2s}
+.feat:hover{border-color:var(--accent)}
+.feat .ic{font-size:24px;margin-bottom:10px}
+.feat h3{font-size:13px;font-weight:700;color:var(--text1);margin-bottom:4px}
+.feat p{font-size:12px;color:var(--text3);line-height:1.5}
+.section{margin-bottom:40px}
+.section-num{font-size:11px;font-weight:700;letter-spacing:.15em;color:var(--accent);margin-bottom:8px}
+.section h2{font-size:22px;font-weight:700;color:var(--text1);margin-bottom:12px}
+.section p{font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:8px}
+.divider{height:1px;background:var(--border);margin:0 0 40px}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);font-size:14px}
+.info-row:last-child{border-bottom:none}
+.info-label{color:var(--text3);font-weight:500}
+.info-val{color:var(--text1);font-weight:600}
+.info-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:8px 20px;margin-bottom:40px}
+.footer{text-align:center;padding-top:40px;border-top:1px solid var(--border);color:var(--text3);font-size:12px}
+.footer .logo{font-size:16px;font-weight:800;margin-bottom:8px}
+.footer .logo span:first-child{color:var(--accent)}
+.footer .logo span:last-child{color:var(--accent2)}
+.hgb{margin-top:8px;font-size:11px;letter-spacing:.08em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html" aria-label="Back to NoteStudio app">← Back to App</a>
+
+  <div class="ns-header">
+    <div class="ns-icon">N</div>
+    <div>
+      <div class="ns-name"><span>Note</span><span>Studio</span></div>
+      <div class="ns-sub">About</div>
+    </div>
+  </div>
+
+  <div class="badge">Version 1.3.2</div>
+
+  <p class="tagline">Your notes, your way.</p>
+  <p class="desc">NoteStudio is a beautifully crafted, offline-first notes app built as a single HTML file. No accounts, no servers, no limits — just a powerful writing experience that works anywhere, anytime.</p>
+
+  <div class="feat-grid">
+    <div class="feat"><div class="ic">✍️</div><h3>Rich Text Editor</h3><p>Bold, italic, colors, headings, lists and more</p></div>
+    <div class="feat"><div class="ic">📁</div><h3>Folder System</h3><p>Hierarchical folders with color coding</p></div>
+    <div class="feat"><div class="ic">🌍</div><h3>4 Languages</h3><p>English, Romanian, Polish, Russian</p></div>
+    <div class="feat"><div class="ic">🎨</div><h3>3 Themes</h3><p>Dark, Light and Sepia</p></div>
+    <div class="feat"><div class="ic">📄</div><h3>PDF Export</h3><p>Export any note as a styled PDF</p></div>
+    <div class="feat"><div class="ic">🎤</div><h3>Voice Input</h3><p>Dictate notes hands-free</p></div>
+    <div class="feat"><div class="ic">🖼️</div><h3>Image Support</h3><p>Insert photos from gallery or camera</p></div>
+    <div class="feat"><div class="ic">⚡</div><h3>Fully Offline</h3><p>Works without internet, always</p></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">01</div>
+    <h2>App Info</h2>
+    <div class="info-box">
+      <div class="info-row"><span class="info-label">Version</span><span class="info-val">1.3.1</span></div>
+      <div class="info-row"><span class="info-label">Platform</span><span class="info-val">Android · Web PWA</span></div>
+      <div class="info-row"><span class="info-label">Storage</span><span class="info-val">IndexedDB (unlimited)</span></div>
+      <div class="info-row"><span class="info-label">License</span><span class="info-val">MIT</span></div>
+      <div class="info-row"><span class="info-label">Developer</span><span class="info-val">HGB — gabrielbogdan5</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">02</div>
+    <h2>Links</h2>
+    <p>🌐 Web app: <a href="https://notestudio.pages.dev/" target="_blank">gabrielbogdan5.github.io/NoteStudio</a></p>
+    <p>🔒 Privacy Policy: <a href="privacy-policy.html">View Privacy Policy</a></p>
+    <p>📋 Terms & Conditions: <a href="terms-and-conditions.html">View Terms</a></p>
+    <p>📧 Contact: <a href="mailto:notestudiocontact@gmail.com">notestudiocontact@gmail.com</a></p>
+  </div>
+
+  <div class="footer">
+    <div class="logo"><span>Note</span><span>Studio</span></div>
+    <div>© 2025 NoteStudio. All rights reserved.</div>
+    <div class="hgb">BY HGB</div>
+  </div>
+</div>
+</body>
+</html>
