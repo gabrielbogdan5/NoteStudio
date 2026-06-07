@@ -89,7 +89,7 @@
 | 🔒 Secure | Content Security Policy, no external data collection |
 | 📱 PWA + TWA | Installable on Android via Play Store or browser |
 
----
+--- 
 
 ## ✦ Links
 
