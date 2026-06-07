@@ -31,7 +31,7 @@
 
 ---
 
-## ✦ What's New — v1.3.2
+## ✦ What's New — v1.3.2 
 
 | | Feature | Details |
 |--|---------|---------|
